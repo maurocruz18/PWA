@@ -14,11 +14,14 @@ class SocketManager {
 
   constructor(httpServer: any) {
     this.io = new Server(httpServer, {
-      cors: {
-        origin: process.env.FRONTEND_URL || 'http://localhost:3001',
-        methods: ['GET', 'POST'],
-        credentials: true,
-      },
+      origin: [
+        process.env.FRONTEND_URL || 'http://localhost:3001',
+        'https://pwa-indol-omega.vercel.app', // Coloca aqui o teu URL do Vercel manual para garantir
+        'http://localhost:3000'
+    ],
+    methods: ['GET', 'POST'],
+    credentials: true,
+  },
     });
 
     this.users = new Map();
