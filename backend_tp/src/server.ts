@@ -18,7 +18,7 @@ import { swaggerSpec } from './config/swagger';
 const app = express();
 const httpServer = createServer(app);
 
-app.use(cors());
+app.use(cors({origin: 'https://pwa-indol-omega.vercel.app'}));
 
 // IMPORTANTE: body parser ANTES das rotas
 app.use(express.json({ limit: '150mb' }));
