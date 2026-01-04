@@ -1,0 +1,185 @@
+
+> pt-platform-backend@1.0.0 dev
+> ts-node-dev src/server.ts
+
+[INFO] 16:25:45 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
+Multer não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Servidor de email configurado com sucesso
+Utilizador conectado: 69540dc86dbc0a56269bde95
+Utilizador desconectado: 69540dc86dbc0a56269bde95
+Utilizador conectado: 69540dc86dbc0a56269bde95
+Utilizador desconectado: 69540dc86dbc0a56269bde95
+Utilizador conectado: 69540dc86dbc0a56269bde95
+Utilizador desconectado: 69540dc86dbc0a56269bde95
+Utilizador conectado: 69540dc86dbc0a56269bde95
+Utilizador desconectado: 69540dc86dbc0a56269bde95
+Error: Login sessions require session support. Did you forget to use `express-session` middleware?
+    at SessionManager.logIn (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\sessionmanager.js:21:33)
+    at IncomingMessage.req.login.req.logIn (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\http\request.js:39:26)
+    at Strategy.strategy.success (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\middleware\authenticate.js:265:13)
+    at verified (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport-oauth2\lib\strategy.js:189:20)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\config\oauth.config.js:27:18)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+Error: Login sessions require session support. Did you forget to use `express-session` middleware?
+    at SessionManager.logIn (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\sessionmanager.js:21:33)
+    at IncomingMessage.req.login.req.logIn (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\http\request.js:39:26)
+    at Strategy.strategy.success (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\middleware\authenticate.js:265:13)
+    at verified (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport-oauth2\lib\strategy.js:189:20)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\config\oauth.config.js:47:16)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+Error: Login sessions require session support. Did you forget to use `express-session` middleware?
+    at SessionManager.logIn (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\sessionmanager.js:21:33)
+    at IncomingMessage.req.login.req.logIn (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\http\request.js:39:26)
+    at Strategy.strategy.success (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport\lib\middleware\authenticate.js:265:13)
+    at verified (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\node_modules\passport-oauth2\lib\strategy.js:189:20)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\config\oauth.config.js:27:18)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+[INFO] 16:32:18 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\ClientRequest.ts has been modified
+Multer não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Servidor de email configurado com sucesso
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Utilizador desconectado: 69540de46dbc0a56269bde9b
+Utilizador conectado: 69540df56dbc0a56269bde9f
+[PT CHANGE REQUEST] Cliente: HENRIB002, Novo PT: Outro PT
+Utilizador desconectado: 69540df56dbc0a56269bde9f
+Utilizador conectado: 69540dc86dbc0a56269bde95
+[PT CHANGE APPROVED] Cliente: HENRIB002, Novo PT: 69540de46dbc0a56269bde9b
+Utilizador desconectado: 69540dc86dbc0a56269bde95
+Utilizador conectado: 69540df56dbc0a56269bde9f
+Utilizador 69540df56dbc0a56269bde9f entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Mensagem enviada de 69540df56dbc0a56269bde9f para 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540df56dbc0a56269bde9f saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador desconectado: 69540df56dbc0a56269bde9f
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_6957df69e36a0ca69b4a9475
+Utilizador 69540de46dbc0a56269bde9b entrou na conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+Utilizador 69540de46dbc0a56269bde9b saiu da conversa 69540de46dbc0a56269bde9b_69540df56dbc0a56269bde9f
+[INFO] 16:36:23 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\User.ts has been modified
+Compilation error in C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\User.ts
+[ERROR] 16:36:24 ⨯ Unable to compile TypeScript:
+src/models/User.ts(57,3): error TS2353: Object literal may only specify known properties, and 'clientRequestsFromPTs' does not exist in type '{ username?: SchemaDefinitionProperty<string, IUser> | undefined; password?: SchemaDefinitionProperty<string, IUser> | undefined; ... 15 more ...; __v?: SchemaDefinitionProperty<...> | undefined; }'.
+src/models/User.ts(73,3): error TS1005: ',' expected.
+
+[INFO] 16:36:25 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\User.ts has been modified
+Multer não configurado
+User controller não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Servidor de email configurado com sucesso
+[INFO] 16:36:34 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\User.ts has been modified
+Multer não configurado
+User controller não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Servidor de email configurado com sucesso
+Utilizador conectado: 69540de46dbc0a56269bde9b
+[INFO] 16:36:37 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\User.ts has been modified
+Multer não configurado
+User controller não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Servidor de email configurado com sucesso
+[INFO] 16:38:50 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\models\User.ts has been modified
+Multer não configurado
+User controller não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Servidor de email configurado com sucesso
+Utilizador conectado: 69540de46dbc0a56269bde9b
+[INFO] 16:39:42 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\controllers\User.controller.ts has been modified
+Compilation error in C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\controllers\User.controller.ts
+Multer não configurado
+User controller não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Servidor de email configurado com sucesso
+[INFO] 16:39:44 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\controllers\User.controller.ts has been modified
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Compilation error in C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\controllers\User.controller.ts
+Multer não configurado
+User controller não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Servidor de email configurado com sucesso
+[INFO] 16:40:26 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\controllers\User.controller.ts has been modified
+Multer não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Servidor de email configurado com sucesso
+[INFO] 16:40:45 Restarting: C:\Users\PC\OneDrive\Documents\GitHub\Ctesp\PWA\backend_tp\src\controllers\User.controller.ts has been modified
+Multer não configurado
+Password controller não configurado
+Upload controller não configurado
+OAuth controller não configurado
+Socket.io configurado
+MongoDB conectado
+Servidor rodando na porta 3000
+Utilizador conectado: 69540de46dbc0a56269bde9b
+Servidor de email configurado com sucesso
+Terminate batch job (Y/N)? 
+^C

@@ -1,0 +1,104 @@
+========================================================================
+            DOCUMENTAÇÃO DE INTEGRAÇÃO BACKEND - PROJETO PWA
+========================================================================
+
+1. CONFIGURAÇÃO BASE
+------------------------------------------------------------------------
+Base URL: http://localhost:3000/api
+Headers Obrigatórios para rotas privadas:
+  Authorization: Bearer <SEU_TOKEN_JWT>
+Content-Type: application/json (exceto uploads de ficheiros)
+
+2. PERFIS E PERMISSÕES (ROLES)
+------------------------------------------------------------------------
+O sistema tem 3 tipos de utilizadores (Role):
+  - 'ADMIN': Gere PTs.
+  - 'PT': Gere Clientes e Planos.
+  - 'CLIENT': Consulta planos e executa treinos.
+
+NOTA IMPORTANTE: 
+Um utilizador registado como 'PT' começa com `isValidated: false`.
+Ele NÃO consegue fazer nada até um ADMIN o validar através da rota /admin.
+O Frontend deve verificar `user.isValidated` no login e mostrar aviso se false.
+
+3. AUTENTICAÇÃO E REGISTO
+------------------------------------------------------------------------
+Endpoint: POST /auth/register
+Lógica Especial:
+  - Se um visitante se registar: Cria conta normal (pública).
+  - Se um PT logado usar esta rota (enviando token): O sistema deteta e
+    associa AUTOMATICAMENTE o novo utilizador como cliente desse PT.
+    (Isto cumpre o requisito: "PT é responsável por adicionar clientes").
+
+4. FUNCIONALIDADES ESPECÍFICAS
+------------------------------------------------------------------------
+
+A. PLANOS DE TREINO
+   - Endpoint: POST /plans (Apenas PT)
+   - Validação: Máximo 10 exercícios por plano.
+   - Associação: Se o cliente ainda não tiver PT, fica associado a quem criou o plano.
+   - Conflito: Se tentar criar plano para cliente de outro PT -> Erro 403.
+
+B. COMPLETAR TREINO (UPLOAD DE FOTO)
+   - Endpoint: POST /plans/:id/complete
+   - Formato: Multipart/Form-Data (NÃO é JSON)
+   - Campos:
+       - status: 'completed' ou 'failed'
+       - feedback: texto
+       - image: ficheiro (opcional)
+
+C. DASHBOARD (ESTATÍSTICAS)
+   - Endpoint: GET /plans/stats
+   - Se for CLIENT: Retorna os dados dele.
+   - Se for PT: Obrigatório enviar ?clientId=XYZ na URL.
+   - Retorno: Array de objetos { date: "2025-1", totalCompleted: 5 }
+     (Ideal para usar direto no Recharts ou Chart.js).
+
+D. TEMAS (DARK/LIGHT)
+   - Endpoint: PUT /users/profile
+   - Payload: { "themePreference": "dark" }
+   - O Frontend deve ler esta propriedade no Login e aplicar o tema.
+
+E. CHAT E SOCKETS (REAL-TIME)
+   - Conexão: io("http://localhost:3000")
+   - Eventos para ouvir:
+       - 'receive_message': Quando chega uma nova mensagem na conversa aberta.
+       - 'notification': Para mostrar Toasts (ex: "Nova mensagem!", "Treino Falhado").
+       - 'toast': Notificações específicas de treino.
+
+5. LISTA RÁPIDA DE ENDPOINTS
+------------------------------------------------------------------------
+
+[AUTH]
+POST /auth/login          -> Retorna { token, user }
+POST /auth/register       -> Cria user (se PT chamar, cria cliente associado)
+POST /auth/qr-login       -> Login via QR Code
+
+[USERS]
+GET /users/search?query=x -> Procurar users
+GET /users/my-clients     -> (PT) Lista os seus clientes
+PUT /users/profile        -> Atualizar foto ou tema
+
+[PLANS]
+GET /plans                -> Lista planos (com paginação ?page=1)
+POST /plans               -> (PT) Criar plano
+POST /plans/:id/complete  -> (Client) Marcar como feito
+GET /plans/stats          -> Dados para gráficos
+
+[MESSAGES]
+GET /messages/conversations -> Lista de conversas ativas
+POST /messages              -> Enviar mensagem
+GET /messages/conversation/:id -> Histórico de chat
+
+[ADMIN]
+GET /admin/pending-pts    -> PTs à espera de aprovação
+PATCH /admin/users/:id/validate -> Aprovar PT
+PATCH /admin/users/change-pt -> Mudar PT de um cliente (Forçar troca)
+
+6. COLEÇÃO POSTMAN
+------------------------------------------------------------------------
+Instruções:
+    Importa o ficheiro PWA_Final_Collection.json no Postman.
+    Cria um Environment com a variável baseUrl: http://localhost:3000/api.
+
+========================================================================
