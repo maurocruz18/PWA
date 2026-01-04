@@ -28,7 +28,7 @@ const allowedOrigins = [
 app.use(cors({
   origin: function (origin, callback) {
     // Permitir pedidos sem origem (como apps mobile ou postman)
-    if (!origin) return callback(null, true);
+    if (!origin || origin === 'null') return callback(null, true);
 
     // Verificar se a origem está na lista (ignorando barra no final)
     const originClean = origin.replace(/\/$/, ''); // Remove a última barra se existir
