@@ -18,22 +18,31 @@ import { swaggerSpec } from './config/swagger';
 const app = express();
 const httpServer = createServer(app);
 
+// Lista de origens permitidas
 const allowedOrigins = [
-  process.env.FRONTEND_URL,           // O URL que definiste no Render
-  'http://localhost:3000',            // Frontend local
-  'http://localhost:3001',            // Frontend local alternativo
-  'https://pwa-indol-omega.vercel.app', // O teu URL do Vercel (exemplo)
-  // Adiciona aqui o URL do Vercel com 'www' se for o caso
+  'http://localhost:3000',
+  'http://localhost:3001',
+  process.env.FRONTEND_URL // O URL do Render (ex: https://meu-app.vercel.app)
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    //!origin permite pedidos sem origem (como Postman ou Apps Mobile nativas)
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Permitir pedidos sem origem (como apps mobile ou postman)
+    if (!origin) return callback(null, true);
+
+    // Verificar se a origem está na lista (ignorando barra no final)
+    const originClean = origin.replace(/\/$/, ''); // Remove a última barra se existir
+    
+    // Verifica se alguma das origens permitidas corresponde
+    const isAllowed = allowedOrigins.some(allowed => {
+      return allowed && allowed.replace(/\/$/, '') === originClean;
+    });
+
+    if (isAllowed) {
       callback(null, true);
     } else {
-      console.log('Origem bloqueada pelo CORS:', origin); // Isto vai ajudar a ver no log do Render quem está a ser bloqueado
-      callback(new Error('Not allowed by CORS'));
+      console.log('BLOQUEADO PELO CORS:', origin); // Log para ajudar a debuggar
+      callback(new Error(`Not allowed by CORS: ${origin}`));
     }
   },
   credentials: true,
